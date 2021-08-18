@@ -27,7 +27,7 @@ const resolvers = {
         throw new AuthenticationError('Sorry, bad credentials.')
       }
 
-      const correctPw = await profile.isCorrectPassword(password)
+      const correctPw = await user.isCorrectPassword(password)
 
       if (!correctPW) {
         throw new AuthenticationError('Sorry, bad credentials.')
